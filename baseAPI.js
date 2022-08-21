@@ -19,24 +19,3 @@ function BaseAPI() {
   };
 }
 export default BaseAPI;
-
-import { Config } from "./config.js";
-
-export class BaseAPI2 {
-  URL = Config.URL;
-  get = async (endPoint) => {
-    return await axios.get(`${this.URL}/${endPoint}.json`);
-  };
-
-  post = async (endPoint, dataPost) => {
-    return await axios.post(`${this.URL}/${endPoint}.json`, dataPost);
-  };
-
-  delete = async (endPoint) => {
-    return await axios.delete(`${this.URL}/${endPoint}.json`);
-  };
-
-  put = async (endPoint, dataPut) => {
-    return await axios.put(`${this.URL}/${endPoint}.json`, dataPut);
-  };
-}
