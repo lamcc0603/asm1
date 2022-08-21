@@ -670,7 +670,9 @@ function searchKw() {
   let search_submit = $("#search_submit");
   search_submit.click(function () {
     let kw = search_input.val();
-    window.location.href = `/asm1/views/layout/categories.html?page=search&kw=${kw}`;
+    console.log(window.location.pathname);
+
+    window.location.href = `${window.location.pathname}/categories.html?page=search&kw=${kw}`;
   });
 }
 
